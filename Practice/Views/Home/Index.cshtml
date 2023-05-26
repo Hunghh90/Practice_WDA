@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Exam Page";
+    var exams = ViewBag.exams;
+    var rooms = ViewBag.rooms;
+    var facultys = ViewBag.facultys;
+}
+
+<div class="text-center">
+    <h1 class="display-4">List Exam</h1>
+    <tabble class="table">
+        <thead>
+            <th>Subject</th>
+            <th>Start Time</th>
+            <th>Exam Date</th>
+            <th>Duration</th>
+            <th>Class Room</th>
+            <th>Faculty</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+            @foreach(var e in exams)
+            {
+                <tr>
+                    <td>@e.Name</td>
+                    <td>@e.StartTime</td>
+                    <td>@e.ExamDate</td>
+                    <td>@e.Duration</td>
+                    <td>@e.Name</td>
+                    <td>@e.Name</td>
+                </tr>                
+            }
+        </tbody>
+    </tabble>
+    
+</div>
